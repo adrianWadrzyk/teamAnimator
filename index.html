@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pl-PL">
 
 <head>
@@ -13,17 +14,17 @@
         <p> Team Animator Wadowice </p>
         <nav class="nav">
             <ul class="nav__list list--nav">
-                <li class="nav__item"><a href="#welcome_photo" class="nav__link"> Home</a></li>
-                <li class="nav__item"><a href="#about_us" class="nav__link"> O nas</a></li>
-                <li class="nav__item"><a href="#offer" class="nav__link"> Oferta</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link"> Kontakt</a></li>
+                <li class="nav__item"><a href="#zdjęcie_powitalne" class="nav__link"> Home</a></li>
+                <li class="nav__item"><a href="#o_nas" class="nav__link"> O nas</a></li>
+                <li class="nav__item"><a href="#oferta" class="nav__link"> Oferta</a></li>
+                <li class="nav__item"><a href="#kontakt" class="nav__link"> Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="welcome_photo" class="welcome_photo"></div>
+    <div id="zdjęcie_powitalne" class="welcome_photo"></div>
 
-    <main id="about_us" class="about_us">
+    <main id="o_nas" class="about_us">
         <h1 class="about_us__header"> Czy potrzebuje animatora?</h1>
 
         <p class="about_us__description"> Planując swój uroczysty dzień, często zastanawiamy się co zrobić,
@@ -47,7 +48,7 @@
     </main>
 
 
-    <section id="offer" class="offer">
+    <section id="oferta" class="offer">
         <h3> Wybierz jeden z pakietów </h3>
         <div class="tiles tiles--offer">
             <span class="offer__title mini"> Pakiet mini </span>
@@ -124,18 +125,18 @@
 
     </section>
 
-    <section class="gallery" id="gallery">
-
-        <div class="gallery__image image1"></div>
-        <div class="gallery__image image2"></div>
-        <div class="gallery__image image3"></div>
-        <div class="gallery__image image4"></div>
-        <div class="gallery__image image5"></div>
-        <div class="gallery__image image6"></div>
-
+    <section id="gallery" class="gallery" >
+         <ul class="image_list">
+            <li><img src="photo/dzieci1.jpg" alt="dzieci1" class="gallery__image"></li>
+            <li><img src="photo/dzieci2.jpg" alt="dzieci2" class="gallery__image"></li>
+            <li><img src="photo/dzieci3.jpg" alt="dzieci3" class="gallery__image"></li>
+            <li><img src="photo/dzieci4.jpg" alt="dzieci4" class="gallery__image"></li>  
+            <li><img src="photo/dzieci5.jpg" alt="dzieci5" class="gallery__image"></li>
+            <li><img src="photo/dzieci6.jpg" alt="dzieci6" class="gallery__image"></li>
+    </ul>
     </section>
 
-    <section class="contact" id="contact">
+    <section id="kontakt" class="contact">
         <h3 class="contact__header"> NAPISZ DO NAS</h3>
         <form class="form" id="contactForm" method="POST" action="backend/test.php">
             <div class="form__field">
