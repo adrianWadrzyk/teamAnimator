@@ -33,7 +33,6 @@ form.setAttribute("novalidate", true);
     })
 })
 
-
 const showErrorMessage = elem => { 
     if(elem.parentNode.querySelector(".errorMessage") === null)
     {
@@ -45,7 +44,6 @@ const showErrorMessage = elem => {
     }
 }
   
-
 const hideErrorMessage = elem => { 
     if(elem.parentNode.querySelector(".errorMessage") !== null) 
        elem.parentNode.querySelector(".errorMessage").remove();
@@ -68,13 +66,14 @@ const checkFieldsErrors = elements => {
     return fieldsAreValid;
 }
 
-
-
 form.addEventListener("submit", e => { 
     e.preventDefault();
 
     if(checkFieldsErrors(inputs)) { 
-        
+        let  btn = document.querySelector(".submit_btn");
+        btn.innerText = " Wysyłanie...";
+        btn.setAttribute("disabled", "disabled");
+
         let elementsToSend = document.querySelectorAll(".input, .textarea");
         const dataToSend = new FormData();
         [...elementsToSend].forEach(el => dataToSend.append(el.name, el.value));
@@ -89,10 +88,14 @@ form.addEventListener("submit", e => {
         xhr.addEventListener("load", function() { 
             if(this.status === 200)
             {
-                console.log("Wynik połączenia: ");
-                console.log(this)
+                btn.innerText = " Wyślij";
+                btn.setAttribute("disabled", "enabled");
             } else { 
-                console.log("nie udało się połaczyć");
+               btn.innerText = " Błąd serwera, spróbuj ponownie";
+               setTimeout(function(){
+               btn.innerText = " Wyślij";
+               btn.setAttribute("disabled", "enabled");
+            }, 3000);
             }
         })
 

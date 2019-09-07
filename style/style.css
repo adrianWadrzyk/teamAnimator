@@ -329,7 +329,7 @@
     }
 
     .about_us__header {
-        padding-top: 2em;
+        padding-top: 1em;
         padding-bottom: 1em;
     }
 
@@ -449,9 +449,4 @@
 
 .error {
     border: 1px solid red;
-}
-
-.sticky { 
-    position: fixed;
-    top:0;
 }
