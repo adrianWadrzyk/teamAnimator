@@ -89,12 +89,12 @@ form.addEventListener("submit", e => {
             if(this.status === 200)
             {
                 btn.innerText = " Wyślij";
-                btn.setAttribute("disabled", "enabled");
+                btn.remove("disabled");
             } else { 
                btn.innerText = " Błąd serwera, spróbuj ponownie";
                setTimeout(function(){
                btn.innerText = " Wyślij";
-               btn.setAttribute("disabled", "enabled");
+               btn.removeAttribute("disabled");
             }, 3000);
             }
         })
