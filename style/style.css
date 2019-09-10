@@ -23,6 +23,7 @@
     text-align: center;
     padding: 20px 0px;
     width: 100%;
+    font-size: 1.8em;
 }
 
 .nav__item {
@@ -42,6 +43,7 @@
 }
 
 .nav__link {
+    width: 100%;
     color: black;
     text-decoration: none;
 }
@@ -69,6 +71,10 @@
     width: 100%;
 }
 
+.about_us > .section__header { 
+     color: #009eac;
+}
+
 .about_us__description--strong {
     color: #009eac;
 }
@@ -94,12 +100,9 @@
     align-items: center;
 }
 
-.offer>h3 {
+.offer > .section__header {
     margin-top: 2em;
-    font-size: 1.5em;
     color: #009eac;
-    width: 100%;
-    text-align: center;
 }
 
 .tiles {
@@ -257,7 +260,7 @@
 }
 
 .label {
-    padding-top: 7%;
+    padding-top: 5%;
 }
 
 .submit_btn {
@@ -268,7 +271,7 @@
     border: 1px solid black;
 }
 
-.contact_info__details {
+.contact__info__details {
     min-height: 8vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -363,7 +366,6 @@
       .form {
         margin: 0 auto;
         width: 50%;
-        min-height: 50vh;
     }
 
     .form__field {
