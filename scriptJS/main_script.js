@@ -102,3 +102,22 @@ form.addEventListener("submit", e => {
         xhr.send(dataToSend)
     }
 })
+
+
+// animation for section "why us" 
+
+const sectionWhyUs = document.getElementById("why_us");
+const whyUsChildren = document.querySelectorAll(".tiles--why_us");
+const headerWhyUs = document.querySelector(".why_us--header");
+
+var onScrollHandler = () => { 
+        let offsetY_WhyUs= sectionWhyUs.getBoundingClientRect().y;
+    if(offsetY_WhyUs < 450)  {       
+        headerWhyUs.style.animation ="jumpingScale 1.5s ease-in-out forwards";
+        for (const item of whyUsChildren) {
+            item.style.animation = "fadeIn 1.5s forwards 1.5s";
+        }
+    }
+}
+
+document.addEventListener('scroll', onScrollHandler);
