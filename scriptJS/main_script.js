@@ -70,10 +70,11 @@ form.addEventListener("submit", e => {
     e.preventDefault();
 
     if(checkFieldsErrors(inputs)) { 
-        let  btn = document.querySelector(".submit_btn");
+        const  btn = document.querySelector(".submit_btn");
+        btn.classList.add("hide-after");
+        btn.style.width ="30%";
         btn.innerText = " Wysyłanie...";
         btn.setAttribute("disabled", "disabled");
-
         let elementsToSend = document.querySelectorAll(".input, .textarea");
         const dataToSend = new FormData();
         [...elementsToSend].forEach(el => dataToSend.append(el.name, el.value));
@@ -103,6 +104,19 @@ form.addEventListener("submit", e => {
     }
 })
 
+// toggle menu 
+
+const hamburger = document.querySelector(".hamburger");
+
+var toggleClass = () => { 
+    hamburger.classList.toggle("hamburgerTransformToX");
+    hamburger.classList.toggle("transformAfter");
+    let nav__list = document.querySelector(".nav__list");
+    nav__list.classList.toggle("nav__list--show");
+    nav__list.parentElement.classList.toggle("nav--white");
+};
+
+hamburger.addEventListener("click", toggleClass);
 
 // animation for section "why us" 
 
@@ -112,12 +126,12 @@ const headerWhyUs = document.querySelector(".why_us--header");
 
 var onScrollHandler = () => { 
         let offsetY_WhyUs= sectionWhyUs.getBoundingClientRect().y;
-    if(offsetY_WhyUs < 450)  {       
-        headerWhyUs.style.animation ="jumpingScale 1.5s ease-in-out forwards";
+    if(offsetY_WhyUs < 600)  {       
+       headerWhyUs.style.animation ="jumpingScale 1s ease-in-out forwards";
         for (const item of whyUsChildren) {
-            item.style.animation = "fadeIn 1.5s forwards 1.5s";
+            item.style.animation = "fadeIn 1s forwards 1s";
         }
     }
+    document.removeEventListener("scroll", onScrollHandler);
 }
-
 document.addEventListener('scroll', onScrollHandler);
