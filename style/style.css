@@ -425,9 +425,10 @@
   .logo {
     margin-top: 0;
   }
+
   .nav {
     width: 100vw;
-    height: 8vh;
+    height: auto;
     position: relative;
     top: 0;
     display: flex;
