@@ -131,7 +131,7 @@ var onScrollHandler = () => {
         for (const item of whyUsChildren) {
             item.style.animation = "fadeIn 1s forwards 1s";
         }
-    }
-    document.removeEventListener("scroll", onScrollHandler);
+        document.removeEventListener("scroll", onScrollHandler);
+    } 
 }
 document.addEventListener('scroll', onScrollHandler);
