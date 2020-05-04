@@ -127,7 +127,7 @@
 .logo {
   font-size: 1.3em;
   width: 70%;
-  margin: 2vh auto 0;
+  margin: 5vh auto 0;
   padding: 20px 0;
 }
 
@@ -412,6 +412,7 @@
 }
 
 @media only screen and (min-width: 450px) {
+
   .submit_btn {
     width: 30%;
   }
